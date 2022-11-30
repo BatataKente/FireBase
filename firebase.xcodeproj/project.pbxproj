@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DC339AB29377483007D18BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC339AA29377483007D18BA /* AppDelegate.swift */; };
 		1DC339AD29377483007D18BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC339AC29377483007D18BA /* SceneDelegate.swift */; };
-		1DC339AF29377483007D18BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC339AE29377483007D18BA /* ViewController.swift */; };
-		1DC339B229377483007D18BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC339B029377483007D18BA /* Main.storyboard */; };
+		1DC339AF29377483007D18BA /* FirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC339AE29377483007D18BA /* FirebaseViewController.swift */; };
 		1DC339B429377485007D18BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC339B329377485007D18BA /* Assets.xcassets */; };
 		1DC339B729377485007D18BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC339B529377485007D18BA /* LaunchScreen.storyboard */; };
 		1DC339C229377486007D18BA /* firebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC339C129377486007D18BA /* firebaseTests.swift */; };
@@ -20,6 +19,7 @@
 		1DC339E229377A5F007D18BA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1DC339E129377A5F007D18BA /* FirebaseAuth */; };
 		1DC339E429377D7A007D18BA /* Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC339E329377D7A007D18BA /* Create.swift */; };
 		1DC339E629377DA9007D18BA /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC339E529377DA9007D18BA /* Constraints.swift */; };
+		1DC339EE2937881E007D18BA /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC339ED2937881E007D18BA /* FirebaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +43,7 @@
 		1DC339A729377483007D18BA /* firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC339AA29377483007D18BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DC339AC29377483007D18BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1DC339AE29377483007D18BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1DC339B129377483007D18BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1DC339AE29377483007D18BA /* FirebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewController.swift; sourceTree = "<group>"; };
 		1DC339B329377485007D18BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DC339B629377485007D18BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DC339B829377485007D18BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		1DC339DE29377935007D18BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1DC339E329377D7A007D18BA /* Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create.swift; sourceTree = "<group>"; };
 		1DC339E529377DA9007D18BA /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		1DC339ED2937881E007D18BA /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,6 @@
 				1DC339E729377DAC007D18BA /* AppFront */,
 				1DC339E929377DB8007D18BA /* AppDelegate */,
 				1DC339E829377DB3007D18BA /* AppUtils */,
-				1DC339B029377483007D18BA /* Main.storyboard */,
 				1DC339B329377485007D18BA /* Assets.xcassets */,
 				1DC339B529377485007D18BA /* LaunchScreen.storyboard */,
 				1DC339DE29377935007D18BA /* GoogleService-Info.plist */,
@@ -139,7 +138,8 @@
 		1DC339E729377DAC007D18BA /* AppFront */ = {
 			isa = PBXGroup;
 			children = (
-				1DC339AE29377483007D18BA /* ViewController.swift */,
+				1DC339AE29377483007D18BA /* FirebaseViewController.swift */,
+				1DC339ED2937881E007D18BA /* FirebaseViewModel.swift */,
 			);
 			path = AppFront;
 			sourceTree = "<group>";
@@ -299,7 +299,6 @@
 				1DC339B729377485007D18BA /* LaunchScreen.storyboard in Resources */,
 				1DC339DF29377935007D18BA /* GoogleService-Info.plist in Resources */,
 				1DC339B429377485007D18BA /* Assets.xcassets in Resources */,
-				1DC339B229377483007D18BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,10 +323,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DC339AF29377483007D18BA /* ViewController.swift in Sources */,
+				1DC339AF29377483007D18BA /* FirebaseViewController.swift in Sources */,
 				1DC339AB29377483007D18BA /* AppDelegate.swift in Sources */,
 				1DC339E629377DA9007D18BA /* Constraints.swift in Sources */,
 				1DC339AD29377483007D18BA /* SceneDelegate.swift in Sources */,
+				1DC339EE2937881E007D18BA /* FirebaseViewModel.swift in Sources */,
 				1DC339E429377D7A007D18BA /* Create.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,14 +365,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1DC339B029377483007D18BA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1DC339B129377483007D18BA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1DC339B529377485007D18BA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -509,7 +501,7 @@
 				INFOPLIST_FILE = firebase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -536,7 +528,7 @@
 				INFOPLIST_FILE = firebase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
