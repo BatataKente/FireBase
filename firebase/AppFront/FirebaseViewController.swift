@@ -6,21 +6,14 @@
 //
 
 import UIKit
-import Firebase
 
-class ViewController: UIViewController {
-    private let auth = Auth.auth()
+class FireBaseViewController: UIViewController {
+    private let firebaseViewModel = FirebaseViewModel()
     private let eMailTextField = Create.textField()
     private let passWordTextField = Create.textField()
     private lazy var signInButton = Create.button("SIGN IN") {[weak self]_ in
-        self?.auth.createUser(withEmail: self?.eMailTextField.text ?? "",
-                              password: self?.passWordTextField.text ?? "") {_, error in
-            if let error = error {
-                print("ERROR:", error)
-            } else {
-                print("Success!")
-            }
-        }
+        self?.firebaseViewModel.validateUser(email: self?.eMailTextField.text,
+                                             password: self?.passWordTextField.text)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
