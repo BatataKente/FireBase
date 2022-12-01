@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0EA95129392B4100E95233 /* Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0EA95029392B4100E95233 /* Hierarchy.swift */; };
+		1D5A1D902937DC1B005E1765 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5A1D8F2937DC1B005E1765 /* View.swift */; };
+		1D5A1D922937DC28005E1765 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5A1D912937DC28005E1765 /* Interactor.swift */; };
+		1D5A1D942937DC34005E1765 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5A1D932937DC34005E1765 /* Presenter.swift */; };
+		1D5A1D962937DC42005E1765 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5A1D952937DC42005E1765 /* Entity.swift */; };
+		1D5A1D982937DC4E005E1765 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5A1D972937DC4E005E1765 /* Router.swift */; };
 		1DC339AB29377483007D18BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC339AA29377483007D18BA /* AppDelegate.swift */; };
 		1DC339AD29377483007D18BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC339AC29377483007D18BA /* SceneDelegate.swift */; };
 		1DC339AF29377483007D18BA /* FirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC339AE29377483007D18BA /* FirebaseViewController.swift */; };
@@ -40,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D0EA95029392B4100E95233 /* Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hierarchy.swift; sourceTree = "<group>"; };
+		1D5A1D8F2937DC1B005E1765 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		1D5A1D912937DC28005E1765 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		1D5A1D932937DC34005E1765 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		1D5A1D952937DC42005E1765 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		1D5A1D972937DC4E005E1765 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		1DC339A729377483007D18BA /* firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC339AA29377483007D18BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DC339AC29377483007D18BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +96,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D5A1D8E2937DBF1005E1765 /* Viper */ = {
+			isa = PBXGroup;
+			children = (
+				1D5A1D8F2937DC1B005E1765 /* View.swift */,
+				1D5A1D912937DC28005E1765 /* Interactor.swift */,
+				1D5A1D932937DC34005E1765 /* Presenter.swift */,
+				1D5A1D952937DC42005E1765 /* Entity.swift */,
+				1D5A1D972937DC4E005E1765 /* Router.swift */,
+			);
+			path = Viper;
+			sourceTree = "<group>";
+		};
 		1DC3399E29377483007D18BA = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +162,7 @@
 		1DC339E729377DAC007D18BA /* AppFront */ = {
 			isa = PBXGroup;
 			children = (
+				1D5A1D8E2937DBF1005E1765 /* Viper */,
 				1DC339AE29377483007D18BA /* FirebaseViewController.swift */,
 				1DC339ED2937881E007D18BA /* FirebaseViewModel.swift */,
 			);
@@ -174,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				1DC339E529377DA9007D18BA /* Constraints.swift */,
+				1D0EA95029392B4100E95233 /* Hierarchy.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -323,11 +349,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D5A1D982937DC4E005E1765 /* Router.swift in Sources */,
+				1D5A1D942937DC34005E1765 /* Presenter.swift in Sources */,
 				1DC339AF29377483007D18BA /* FirebaseViewController.swift in Sources */,
 				1DC339AB29377483007D18BA /* AppDelegate.swift in Sources */,
 				1DC339E629377DA9007D18BA /* Constraints.swift in Sources */,
 				1DC339AD29377483007D18BA /* SceneDelegate.swift in Sources */,
 				1DC339EE2937881E007D18BA /* FirebaseViewModel.swift in Sources */,
+				1D5A1D962937DC42005E1765 /* Entity.swift in Sources */,
+				1D5A1D902937DC1B005E1765 /* View.swift in Sources */,
+				1D0EA95129392B4100E95233 /* Hierarchy.swift in Sources */,
+				1D5A1D922937DC28005E1765 /* Interactor.swift in Sources */,
 				1DC339E429377D7A007D18BA /* Create.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

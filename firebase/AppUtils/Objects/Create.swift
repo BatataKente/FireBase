@@ -8,6 +8,13 @@
 import UIKit
 
 struct Create {
+    static func label(_ text: String? = nil) -> UILabel {
+        let label = UILabel()
+        label.text = text
+        label.font = .boldSystemFont(ofSize: 20)
+        label.textColor = .label
+        return label
+    }
     static func textField() -> UITextField {
         let textField = UITextField()
         return textField

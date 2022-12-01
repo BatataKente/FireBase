@@ -23,8 +23,7 @@ class FireBaseViewController: UIViewController {
         view.addSubview(stackView)
         view.backgroundColor = .systemPurple
         stackView
-            .constraint(.centerX)
-            .constraint(.centerY)
-            .constraint(.width, multiplier: 0.8)
+            .constraint(attributes: [.centerX, .centerY])
+            .constraint(attribute: .width, multiplier: 0.8)
     }
 }
